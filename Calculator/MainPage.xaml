@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+
+    <StackLayout BackgroundColor="Black">
+        <Frame HeightRequest="370" BackgroundColor="Black">
+            <Label
+                Text="0"
+                x:Name="result"
+                FontSize="36"
+                FontAttributes="Bold"
+                HorizontalOptions="End"
+                TextColor="White"
+                VerticalOptions="End"
+                > 
+            </Label>
+        </Frame>
+         <Line  X1="500"
+                Y1="0"
+                X2="0"
+                Y2="0"
+                Stroke="white"
+                />
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Row 1-->
+            <Button
+                BackgroundColor="Black"
+                x:Name="clearBtn"
+                Clicked="clearBtn_Clicked"
+                TextColor="Orange"
+                FontSize="25"
+                Text="AC"
+                Grid.Row="0"
+                Grid.Column="0"/>
+            <Button
+                BackgroundColor="Black"
+                x:Name="suppBtn"
+                Clicked="suppBtn_Clicked"
+                TextColor="Orange"
+                FontSize="25"
+                Text="SUPP"
+                Grid.Row="0"
+                Grid.Column="1"/>
+            <Button
+                BackgroundColor="Black"
+                x:Name="pourcentageBtn"
+                Clicked="pourcentageBtn_Clicked"
+                TextColor="Orange"
+                FontSize="25"
+                Text="%"
+                Grid.Row="0"
+                Grid.Column="2"/>
+            <Button
+                BackgroundColor="Black"
+                TextColor="Orange"
+                Clicked="OperationButton"
+                FontSize="25"
+                Text="/"
+                Grid.Row="0"
+                Grid.Column="3"/>
+
+            <!--Row 2-->
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="7"
+                Grid.Row="1"
+                Grid.Column="0"
+                x:Name="BtnSeven"
+                />
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="8"
+                Grid.Row="1"
+                Grid.Column="1"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="9"
+                Grid.Row="1"
+                Grid.Column="2"/>
+            <Button
+                BackgroundColor="Black"
+                x:Name="multiply"
+                Clicked="OperationButton"
+                TextColor="Orange"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="X"
+                Grid.Row="1"
+                Grid.Column="3"/>
+
+            <!--Row 3-->
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="4"
+                Grid.Row="2"
+                Grid.Column="0"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="5"
+                Grid.Row="2"
+                Grid.Column="1"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="6"
+                Grid.Row="2"
+                Grid.Column="2"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="OperationButton"
+                TextColor="Orange"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="-"
+                Grid.Row="2"
+                Grid.Column="3"/>
+
+            <!--Row 4-->
+            <Button
+                BackgroundColor="Black"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="1"
+                x:Name="btnOne"
+                Clicked="Button_Clicked"
+                Grid.Row="3"
+                Grid.Column="0"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="2"
+                Grid.Row="3"
+                Grid.Column="1"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontSize="25"
+                FontAttributes="Bold"
+                Text="3"
+                Grid.Row="3"
+                Grid.Column="2"/>
+            <Button
+                BackgroundColor="Black"
+                Clicked="OperationButton"
+                FontSize="25"
+                TextColor="Orange"
+                FontAttributes="Bold"
+                Text="+"
+                Grid.Row="3"
+                Grid.Column="3"/>
+
+            <!--Row 5-->
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                TextColor="White"
+                FontAttributes="Bold"
+                Text="0"
+                FontSize="25"
+                Grid.Row="4"
+                Grid.Column="1"/>
+            <Button
+                BackgroundColor="Orange"
+                x:Name="equalBtn"
+                Clicked="btnEqual_clicked"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="25"
+                Text="="
+                Grid.Row="4"
+                CornerRadius="40"
+                Grid.Column="3"/>
+           
+
+        </Grid>
+       
+        
+    </StackLayout>
+
+</ContentPage>
