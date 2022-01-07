@@ -14,13 +14,22 @@ namespace Calculator
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new Ynov.SimpleApp.MainPageViewModel();
 
         }
 
-        
+        private System.Drawing.Color DarkerColor(System.Drawing.Color color, float correctionfactory = 50f)
+        {
+            const float hundredpercent = 100f;
+            return System.Drawing.Color.FromArgb((int)(((float)color.R / hundredpercent) * correctionfactory),
+                (int)(((float)color.G / hundredpercent) * correctionfactory), (int)(((float)color.B / hundredpercent) * correctionfactory));
+        }
+
+
         private decimal firstNumber;
         private string operatorName; 
         private bool isClickedOperator = false;
+        private List<string> history;
 
 
         private void OperationButton(System.Object sender, System.EventArgs e)
@@ -122,6 +131,11 @@ namespace Calculator
             {
                 await DisplayAlert("Error",ex.Message,"OK");
             }
+        }
+
+        private void addHistory()
+        {
+            history.Add("element");
         }
 
     }

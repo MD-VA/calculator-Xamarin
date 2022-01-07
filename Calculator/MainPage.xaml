@@ -6,7 +6,7 @@
     <StackLayout BackgroundColor="Black">
         <Frame HeightRequest="370" BackgroundColor="Black">
             <Label
-                Text="0"
+                Text="{Binding Result}"
                 x:Name="result"
                 FontSize="36"
                 FontAttributes="Bold"
@@ -41,7 +41,7 @@
             <Button
                 BackgroundColor="Black"
                 x:Name="clearBtn"
-                Clicked="clearBtn_Clicked"
+                Command="{Binding ClearCommand}"
                 TextColor="Orange"
                 FontSize="25"
                 Text="AC"
@@ -50,7 +50,7 @@
             <Button
                 BackgroundColor="Black"
                 x:Name="suppBtn"
-                Clicked="suppBtn_Clicked"
+                Command="{Binding SuppCommand}"
                 TextColor="Orange"
                 FontSize="25"
                 Text="SUPP"
@@ -59,7 +59,7 @@
             <Button
                 BackgroundColor="Black"
                 x:Name="pourcentageBtn"
-                Clicked="pourcentageBtn_Clicked"
+                Command="{Binding PourcentCommand}"
                 TextColor="Orange"
                 FontSize="25"
                 Text="%"
@@ -68,7 +68,7 @@
             <Button
                 BackgroundColor="Black"
                 TextColor="Orange"
-                Clicked="OperationButton"
+                Command="{Binding OperationCommand}" CommandParameter="/"
                 FontSize="25"
                 Text="/"
                 Grid.Row="0"
@@ -77,7 +77,8 @@
             <!--Row 2-->
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                
+                Command="{Binding ClickNumberCommand}" CommandParameter="7"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -88,7 +89,7 @@
                 />
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="8"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -97,7 +98,7 @@
                 Grid.Column="1"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="9"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -107,7 +108,7 @@
             <Button
                 BackgroundColor="Black"
                 x:Name="multiply"
-                Clicked="OperationButton"
+                Command="{Binding OperationCommand}" CommandParameter="X"
                 TextColor="Orange"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -118,7 +119,7 @@
             <!--Row 3-->
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="4"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -127,7 +128,7 @@
                 Grid.Column="0"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="5"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -136,7 +137,7 @@
                 Grid.Column="1"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="6"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -145,7 +146,7 @@
                 Grid.Column="2"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="OperationButton"
+                Command="{Binding OperationCommand}" CommandParameter="-"
                 TextColor="Orange"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -161,12 +162,12 @@
                 FontAttributes="Bold"
                 Text="1"
                 x:Name="btnOne"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="1"
                 Grid.Row="3"
                 Grid.Column="0"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="2"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -175,7 +176,7 @@
                 Grid.Column="1"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="3"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
@@ -184,9 +185,9 @@
                 Grid.Column="2"/>
             <Button
                 BackgroundColor="Black"
-                Clicked="OperationButton"
-                FontSize="25"
                 TextColor="Orange"
+                FontSize="25"
+                Command="{Binding OperationCommand}" CommandParameter="+"
                 FontAttributes="Bold"
                 Text="+"
                 Grid.Row="3"
@@ -195,7 +196,7 @@
             <!--Row 5-->
             <Button
                 BackgroundColor="Black"
-                Clicked="Button_Clicked"
+                Command="{Binding ClickNumberCommand}" CommandParameter="0"
                 TextColor="White"
                 FontAttributes="Bold"
                 Text="0"
@@ -205,7 +206,7 @@
             <Button
                 BackgroundColor="Orange"
                 x:Name="equalBtn"
-                Clicked="btnEqual_clicked"
+                Command="{Binding EqualCommand}" CommandParameter="0"
                 TextColor="White"
                 FontAttributes="Bold"
                 FontSize="25"
