@@ -4,18 +4,33 @@
              x:Class="Calculator.MainPage">
 
     <StackLayout BackgroundColor="Black">
-        <Frame HeightRequest="370" BackgroundColor="Black">
-            <Label
+                <ScrollView HeightRequest="300" Margin="0 0 0 12">
+                    <Label
+                        Text="{Binding HistoryRes}"
+                        TextColor="White"
+                        FontSize="36"
+                        >
+                     </Label>
+                </ScrollView>
+        <Frame HeightRequest="100" BackgroundColor="Black">
+          
+            <StackLayout
+             HorizontalOptions="End"
+             VerticalOptions="End"
+                >
+          
+             <Label
                 Text="{Binding Result}"
                 x:Name="result"
                 FontSize="36"
                 FontAttributes="Bold"
-                HorizontalOptions="End"
                 TextColor="White"
-                VerticalOptions="End"
                 > 
             </Label>
+            </StackLayout>
+          
         </Frame>
+
          <Line  X1="500"
                 Y1="0"
                 X2="0"

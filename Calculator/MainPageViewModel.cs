@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
@@ -8,15 +9,14 @@ namespace Ynov.SimpleApp
     internal class MainPageViewModel : ViewModelBase
     {
 
-
-
+        
         private string _result;
 
         private decimal firstNumber;
         private string operatorName;
         private bool isClickedOperator = false;
-        private List<string> history;
-
+        public List<string> _history = new List<string>();
+        private string history_result;
 
         public string Result
         {
@@ -24,7 +24,20 @@ namespace Ynov.SimpleApp
             set => SetProperty<String>(ref _result, value);
         }
 
-        public Command<string> ClickNumberCommand { get; }
+        public string HistoryRes
+        {
+            get => history_result;
+            set => SetProperty<String>(ref history_result, value);
+        }
+
+        public List<string> History
+        {
+            get => _history;
+            set => SetProperty<List<string>>(ref _history, value);
+        }
+
+
+    public Command<string> ClickNumberCommand { get; }
         public Command ClearCommand { get; }
         public Command SuppCommand { get; }
         public Command PourcentCommand { get; }
@@ -124,6 +137,7 @@ namespace Ynov.SimpleApp
                 decimal secondNumber = Convert.ToDecimal(Result);
                 string fnResult = caluclate(firstNumber, secondNumber, operatorName).ToString("0.##");
                 Result = fnResult;
+                addHistory(firstNumber + operatorName + secondNumber + "=" + fnResult);
             }
             catch (Exception ex)
             {
@@ -154,11 +168,19 @@ namespace Ynov.SimpleApp
             return fnResult;
         }
 
-        private void addHistory()
+        private void addHistory(string result)
         {
-            history.Add("element");
+            History.Add(result);
+            HistoryRes = "";
+            foreach (Object obj in History)
+            {
+                Console.Write("   {0}", obj);
+                Console.WriteLine();
+                HistoryRes += obj + "\n";
+            }
+              
         }
-
+    
 
     }
 }

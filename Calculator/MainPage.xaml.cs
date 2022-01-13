@@ -38,7 +38,7 @@ namespace Calculator
             isClickedOperator = true;
             operatorName = button.Text;
             firstNumber = Convert.ToDecimal(result.Text);
-
+           
         }
 
         private void btnEqual_clicked(System.Object sender, System.EventArgs e)
