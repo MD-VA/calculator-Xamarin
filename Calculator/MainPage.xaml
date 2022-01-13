@@ -4,7 +4,7 @@
              x:Class="Calculator.MainPage">
 
     <StackLayout BackgroundColor="Black">
-                <ScrollView HeightRequest="300" Margin="0 0 0 12">
+                <ScrollView HeightRequest="300">
                     <Label
                         Text="{Binding HistoryRes}"
                         TextColor="White"
